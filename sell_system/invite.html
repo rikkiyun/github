@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<title>邀请朋友</title>
+	<link rel="stylesheet" href="fonts/iconfont.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/content.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	<header class="header">
+		<a href="" class="header_left">
+			<i class="iconfont icon-back header_leftbtn shadow_btn textshadow_inset"></i>
+		</a>
+		<h1 class="header_title ellipsis textshadow_inset">邀请朋友</h1>
+	</header>
+	<div class="body02">
+		<div class="container01">
+			<h1 class="edit_title">把邀请链接发给朋友即可邀请他成为您的下线成员</h1>
+			<div class="invite_link">
+				<span>http://www.kldy8.com/invitexxx</span>
+				<button class="copybtn textshadow_inset" id="dialog-one">复制</button>
+			</div>
+			<div class="dialogout" id="dialog-onebtn" style="display: none">
+				<div class="dialogmiddle">
+					<div class="dialog">
+						<h1 class="dialog-title">复制成功</h1>
+						<center><p class="dialog-text">您现在可以把链接粘贴给朋友了</p></center>
+						<center><button class="dialog-btn01">确定</button></center>
+					</div>
+				</div>
+			</div>
+
+			<br><br><br><br>
+			<h1 class="edit_title">或者分享到微信朋友圈</h1>
+			<a href="" class="article">
+				<div class="article_img"><img src="images/hongbao.png"></div>
+				<dl class="article_text">
+					<dt>成为快乐电影网会员即送1元现金！</dt>
+					<dd>快乐电影网汇聚当下热门明星以及各种影视器材租售，更可参与电影的拍摄及投资过程，快来参与吧！</dd>
+				</dl>
+			</a>
+
+			<a href="javascript:void(0)" class="btn_submit textshadow_inset" style="margin: 0.5rem 0 0; z-index: 2; position: relative;">分享到朋友圈</a>
+			<a href="javascript:void(0)" class="btn_submit textshadow_inset" style="margin: 0.5rem 0 0;">分享给微信朋友</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$("#dialog-one").click(function(){   //单按钮对话框
+				$("#dialog-onebtn").show();
+			})
+			$(".dialog-btn01").click(function(){   //关闭对话框
+				$(".dialogout").hide();
+			})
+		})
+	</script>
+</body>
+</html>

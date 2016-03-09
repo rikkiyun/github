@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<title>提现方式</title>
+	<link rel="stylesheet" href="fonts/iconfont.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/content.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	<header class="header">
+		<a href="" class="header_left">
+			<i class="iconfont icon-back header_leftbtn shadow_btn textshadow_inset"></i>
+		</a>
+		<h1 class="header_title ellipsis textshadow_inset">支付宝账号</h1>
+	</header>
+	<div class="body02">
+		<div class="container01">
+			<div class="editmode">
+				<h1 class="edit_title">请输入支付宝账号</h1>
+				<input type="tel" class="edit_input">
+			</div>
+			<a href="javascript:void(0)" class="btn_submit textshadow_inset" id="dialog-one">确&nbsp;认</a>
+		</div>
+	</div>
+	<div class="dialogout" id="dialog-onebtn" style="display: none">
+		<div class="dialogmiddle">
+			<div class="dialog">
+				<h1 class="dialog-title">温馨提示</h1>
+				<center><p class="dialog-text">工作人员确认信息无误后将在3个工作日内将钱打到您的账号里，请耐心等候！<br><br>(°□°；)</p></center>
+				<center><button class="dialog-btn01">确定</button></center>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$("#dialog-one").click(function(){   //单按钮对话框
+				$("#dialog-onebtn").show();
+			})
+			$(".dialog-btn01").click(function(){   //关闭对话框
+				$(".dialogout").hide();
+			})
+		})
+	</script>
+</body>
+</html>

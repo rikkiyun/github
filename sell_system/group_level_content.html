@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<title>网络系谱 - 详细信息</title>
+	<link rel="stylesheet" href="fonts/iconfont.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/content.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+</head>
+<body>
+	<header class="header">
+		<a href="" class="header_left">
+			<i class="iconfont icon-back header_leftbtn shadow_btn textshadow_inset"></i>
+		</a>
+		<h1 class="header_title ellipsis textshadow_inset">二级代理</h1>
+	</header>
+	<div class="body01">
+		<center class="detail_title" style="background-image:url(images/textbg.jpg);">
+			<h1 class="textshadow_outset">name02</h1>
+			<div class="textshadow_outset">上级:&nbsp;myname</div>
+		</center>
+		<div class="container01">
+			<article class="group_main">
+				<section>
+					<div style="padding-right: 1rem;"><i class="iconfont icon-activityfill"></i></div>
+					<div class="group_main_text">
+						<h2>他的团队</h2>
+						<p id="num_group">0</p>
+					</div>
+				</section>
+				<section>
+					<div style="padding-right: 1rem;"><i class="iconfont icon-friendfill"></i></div>
+					<div class="group_main_text">
+						<h2>下级代理</h2>
+						<p id="num_nextlevel">0</p>
+					</div>
+				</section>
+				<section>
+					<div style="padding-right: 1rem;"><i class="iconfont icon-sponsorfill"></i></div>
+					<div class="group_main_text">
+						<h2>直推分红</h2>
+						<p id="num_directly">0</p>
+					</div>
+				</section>
+				<section>
+					<div style="padding-right: 1rem;"><i class="iconfont icon-rechargefill"></i></div>
+					<div class="group_main_text">
+						<h2>其他下线分红</h2>
+						<p id="num_other">0</p>
+					</div>
+				</section>
+				<dl class="current_rate">
+					<dt>他给我的分红利率<a href="" class="iconfont icon-questionfill"></a></dt>
+					<dd><b id="num_rate">100</b>%</dd>
+				</dl>
+			</article>
+			<script>
+				$('#num_group').animateNumber({ number: 7 },1000);   //此处设置num_group的值
+
+				$('#num_nextlevel').animateNumber({ number: 4 },1000);   //此处设置num_nextlevel的值
+
+				var decimal_places = 2;
+				var decimal_factor = decimal_places === 0 ? 1 : decimal_places * 10;
+
+				$('#num_directly').animateNumber({
+				    number: 4 * decimal_factor,   //此处设置num_directly的值
+				    numberStep: function(now, tween) {
+				        var floored_number = Math.floor(now) / decimal_factor,
+				        	target = $(tween.elem);
+				        if (decimal_places > 0) {
+				        	floored_number = floored_number.toFixed(decimal_places);
+				        	floored_number = floored_number.toString().replace(',', '.');
+				        }
+				        target.text('￥' + floored_number);
+				    }
+				},1000);
+
+				$('#num_other').animateNumber({
+				    number: 1.5 * decimal_factor,   //此处设置num_other的值
+				    numberStep: function(now, tween) {
+				        var floored_number = Math.floor(now) / decimal_factor,
+				        	target = $(tween.elem);
+				        if (decimal_places > 0) {
+				        	floored_number = floored_number.toFixed(decimal_places);
+				        	floored_number = floored_number.toString().replace(',', '.');
+				        }
+				        target.text('￥' + floored_number);
+				    }
+				},1000);
+
+				$('#num_rate').animateNumber({ number: 100 },2000);   //此处设置num_rate的值
+			</script>
+
+			<div class="title_linebox">
+				<h2 class="title_line">
+					<span>个人信息</span>
+				</h2>
+				<hr>
+			</div>
+			<dl class="info01">
+				<dt class="info01_left">帐号</dt>
+				<dd class="info01_right">name02</dd>
+			</dl>
+			<dl class="info01">
+				<dt class="info01_left">真实姓名</dt>
+				<dd class="info01_right">詹姆斯·D·你猜</dd>
+			</dl>
+			<dl class="info01">
+				<dt class="info01_left">性别</dt>
+				<dd class="info01_right">男</dd>
+			</dl>
+			<dl class="info01">
+				<dt class="info01_left">手机号码</dt>
+				<dd class="info01_right">137***000</dd>
+			</dl>
+			<dl class="info01">
+				<dt class="info01_left">邮箱</dt>
+				<dd class="info01_right">10***00@qq.com</dd>
+			</dl>
+			<dl class="info01">
+				<dt class="info01_left">注册时间</dt>
+				<dd class="info01_right">2016-03-01</dd>
+			</dl>
+			<dl class="info01">
+				<dt class="info01_left">上次登录</dt>
+				<dd class="info01_right">2016-03-04</dd>
+			</dl>
+		</div>
+	</div>
+</body>
+</html>

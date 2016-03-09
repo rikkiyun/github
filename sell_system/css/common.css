@@ -1,0 +1,233 @@
+/*公用*/
+html {
+	font-size:62.5%; margin: 0; padding: 0;
+}
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 62.5%!important;
+    }
+}
+@media only screen and (min-width: 561px){
+    html {
+        font-size: 62.5%!important;
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 62.5%!important;
+    }
+}
+body {
+	font-family: 'Arial', 'Microsoft YaHei';
+	color: #333;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: #27363b;
+}
+a{
+	text-decoration: none;
+	-webkit-transition: all 200ms linear;
+	transition: all 200ms linear;
+	-webkit-opacity: 1;
+	opacity: 1;
+}
+a:active{
+	-webkit-opacity: 0.9;
+	opacity: 0.9;
+}
+input{-webkit-appearance:none;outline:none}
+input[type=radio]{-webkit-appearance:radio;}
+input[type=checkbox]{-webkit-appearance:checkbox;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+/*公用 end*/
+
+
+
+/*头部*/
+.header{
+	width: 100%;
+	height: 5rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	background: rgba(235,73,96,0.9);
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.4);
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+	-webkit-border-radius: 0 0 0.5rem 0.5rem;
+	border-radius: 0 0 0.5rem 0.5rem;
+}
+.header_left,
+.header_right{
+	height: 4rem;
+	margin: 0.5rem 1rem 0;
+	display: block;
+	position: absolute;
+	top: 0;
+}
+.header_left{
+	left: 0;
+}
+.header_right{
+	right: 0;
+}
+.header_leftbtn,
+.header_rightbtn{
+	line-height: 4rem;
+	color: #fff;
+	display: block;
+	padding: 0 1rem;
+	font-size: 2rem;
+	font-style: normal;
+}
+.header_title{
+	width: 50%;
+	line-height: 5rem;
+	font-size: 1.8rem;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+}
+/*头部 end*/
+
+
+
+/*消除顶部浮动的框架*/
+.body01{
+	padding: 6rem 0;
+}
+.body02{
+	padding: 7rem 0;
+}
+/*消除顶部浮动的框架 end*/
+
+
+
+/*文字样式*/
+.textshadow_inset{
+	-webkit-text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+}
+.textshadow{
+	-webkit-text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+}
+.textshadow_outset{
+	-webkit-text-shadow: 0 6px 10px rgba(0,0,0,0.3);
+	text-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+.ellipsis{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+/*文字样式 end*/
+
+
+
+/*按钮样式*/
+.shadow_btn{
+	-webkit-box-shadow: 0 6px 10px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.1);
+	box-shadow: 0 6px 10px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.1);
+	-webkit-border-radius: 0.5rem;
+	border-radius: 0.5rem;
+}
+.btn_submit,
+.btn_submit_white{
+	width: 100%;
+	height: 5rem;
+	line-height: 5rem;
+	text-align: center;
+	border: none;
+	margin: 4rem 0 0;
+	color: #fff;
+	background: #eb4960;
+	font-size: 1.6rem;
+	font-weight: bold;
+	font-family: Arial,"Microsoft YaHei";
+	-webkit-box-shadow: 0 6px 20px rgba(0,0,0,0.4), inset 0 1px 2px rgba(255,255,255,0.2);
+	box-shadow: 0 6px 20px rgba(0,0,0,0.4), inset 0 1px 2px rgba(255,255,255,0.2);
+	-webkit-border-radius: 0.5rem;
+	border-radius: 0.5rem;
+	display: block;
+}
+.btn_submit_white{
+	background: #fff;
+	color: #eb4960;
+}
+/*按钮样式 end*/
+
+
+
+/*内容框架*/
+.container01{
+	margin: 0 1rem 1rem;
+}
+/*内容框架 end*/
+
+
+
+/*弹窗*/
+.dialogout{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1010;
+	background: rgba(0,0,0,0.6);
+	display: table;
+}
+.dialogmiddle{
+	vertical-align: middle;
+	text-align: center;
+	display: table-cell;
+}
+.dialog{
+	display: inline-block;
+	box-sizing: border-box;
+	width: 90%;
+	padding: 2rem 2rem 1rem;
+	background: #fff;
+	-webkit-border-radius: 0.5rem;
+	border-radius: 0.5rem; 
+}
+.dialog-title{
+	margin: 0;
+	font-size: 1.6rem;
+	font-weight: normal;
+	color: #333;
+}
+.dialog-text{
+	font-size: 1.4rem;
+	margin: 1rem 0 2rem;
+	color: #999;
+}
+.dialog-btn01{
+	background: none;
+	border: none;
+	font-size: 1.6rem;
+	color: #5c9f2d;
+	font-family: "Microsoft YaHei";
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+.dialog-btn02{
+	color: #333;
+	border-right: solid 1px #e6e6e6;
+}
+.dialog-btns{
+	font-size: 0;
+}
+.dialog-btns > button{
+	box-sizing: border-box;
+	width: 50%;
+	display: inline-block;
+}
+/*弹窗 end*/

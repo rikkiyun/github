@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<title>收益详情</title>
+	<link rel="stylesheet" href="fonts/iconfont.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/content.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+</head>
+<body>
+	<header class="header">
+		<a href="" class="header_left">
+			<i class="iconfont icon-back header_leftbtn shadow_btn textshadow_inset"></i>
+		</a>
+		<h1 class="header_title ellipsis textshadow_inset">收益详情</h1>
+		<a href="" class="header_right">
+			<i class="iconfont icon-vipcard header_rightbtn shadow_btn textshadow_inset"></i>
+		</a>
+	</header>
+	<div class="body01">
+		<div class="container01">
+			<div class="walletbox">
+				<div class="wallet_title01">昨日收益</div>
+				<div class="wallet_num01 textshadow_outset"><b id="wallet_num01">0</b></div>
+				<div class="wallet_title02">总资金</div>
+				<div class="wallet_num02"><b id="wallet_num02">0</b></div>
+				<script type="text/javascript">
+					var decimal_places = 2;
+					var decimal_factor = decimal_places === 0 ? 1 : decimal_places * 10;
+
+					$('#wallet_num01').animateNumber({
+					    number: 2.75 * decimal_factor,   //此处设置wallet_num01的值
+					    numberStep: function(now, tween) {
+					        var floored_number = Math.floor(now) / decimal_factor,
+					        	target = $(tween.elem);
+					        if (decimal_places > 0) {
+					        	floored_number = floored_number.toFixed(decimal_places);
+					        	floored_number = floored_number.toString().replace(',', '.');
+					        }
+					        target.text('￥' + floored_number);
+					    }
+					},1000);
+
+					$('#wallet_num02').animateNumber({
+					    number: 9.75 * decimal_factor,   //此处设置wallet_num02的值
+					    numberStep: function(now, tween) {
+					        var floored_number = Math.floor(now) / decimal_factor,
+					        	target = $(tween.elem);
+					        if (decimal_places > 0) {
+					        	floored_number = floored_number.toFixed(decimal_places);
+					        	floored_number = floored_number.toString().replace(',', '.');
+					        }
+					        target.text('￥' + floored_number);
+					    }
+					},1000);
+				</script>
+			</div>
+			<article class="num_table">
+				<section>级别</section>
+				<section>人数</section>
+				<section>分红利率</section>
+				<section>收益(元)</section>
+			</article>
+			<div class="num_tablebox">
+				<article class="num_table num_table_first">
+					<section>我的团队</section>
+					<section>14</section>
+					<section>-</section>
+					<section>共8.75</section>
+				</article>
+				<article class="num_table">
+					<section>二级代理</section>
+					<section>5</section>
+					<section>100%</section>
+					<section>5.00</section>
+				</article>
+				<article class="num_table">
+					<section>三级代理</section>
+					<section>6</section>
+					<section>50%</section>
+					<section>3.00</section>
+				</article>
+				<article class="num_table">
+					<section>四级代理</section>
+					<section>3</section>
+					<section>25%</section>
+					<section>0.75</section>
+				</article>
+				<article class="num_table">
+					<section>五级代理</section>
+					<section>0</section>
+					<section>12.5%</section>
+					<section>0.00</section>
+				</article>
+				<article class="num_table">
+					<section>六级代理</section>
+					<section>0</section>
+					<section>6.25%</section>
+					<section>0.00</section>
+				</article>
+				<article class="num_table">
+					<section>七级代理</section>
+					<section>0</section>
+					<section>3.125%</section>
+					<section>0.00</section>
+				</article>
+				<article class="num_table">
+					<section>八级代理</section>
+					<section>0</section>
+					<section>1.5625%</section>
+					<section>0.00</section>
+				</article>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

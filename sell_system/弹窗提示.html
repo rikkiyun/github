@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<title>登录页</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	<button class="loginbtn btnhover" data-role="none" id="dialog-one">单按钮</button>
+	<button class="loginbtn btnhover" data-role="none" id="dialog-two">双按钮</button>
+	<!--id=dialog-one为单按钮的对话框，id=dialog-two为双按钮的对话框-->
+	<div class="dialogout" id="dialog-onebtn" style="display: none">
+		<div class="dialogmiddle">
+			<div class="dialog">
+				<h1 class="dialog-title">弹窗标题</h1>
+				<center><p class="dialog-text">弹窗内容，告知当前页面信息等</p></center>
+				<center><button class="dialog-btn01">确定</button></center>
+			</div>
+		</div>
+	</div>
+	<div class="dialogout" id="dialog-twobtn" style="display: none">
+		<div class="dialogmiddle">
+			<div class="dialog">
+				<h1 class="dialog-title">弹窗标题</h1>
+				<center><p class="dialog-text">弹窗内容，告知当前页面信息等</p></center>
+				<div class="dialog-btns">
+					<button class="dialog-btn01 dialog-btn02">取消</button>
+					<button class="dialog-btn01">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$("#dialog-one").click(function(){   //单按钮对话框
+				$("#dialog-onebtn").show();
+			})
+			$("#dialog-two").click(function(){   //双按钮对话框
+				$("#dialog-twobtn").show();
+			})
+			$(".dialog-btn01,.dialog-btn02").click(function(){   //关闭对话框
+				$(".dialogout").hide();
+			})
+		})
+	</script>
+</body>
+</html>
